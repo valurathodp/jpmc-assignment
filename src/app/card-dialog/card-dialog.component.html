@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Create new card</h1>
+<div mat-dialog-content>
+    <form #cardForm="ngForm" novalidate class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>List Name</mat-label>
+          <input matInput  #name="ngModel" name="cardName" placeholder="Add new card name" [(ngModel)]="cardName" required>
+        </mat-form-field>
+      </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="cardName" [disabled]="cardForm.invalid">Save</button>
+</div>

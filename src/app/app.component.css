@@ -1,0 +1,46 @@
+.app-container {
+    height: 100%;
+    width: 100%;
+  }
+  .app-container header {
+    height: 50px;
+    max-height: 50px;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  }
+  .app-container .content-container {
+    overflow: inherit;
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+  }
+
+  .card-section {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .link-section {
+    width: 20%; 
+    text-align: right;
+  }
+
+  .card-style {
+    height: max-content;
+    width:18%; 
+    border: 2px solid black; 
+    margin-left: 2%;
+    margin-top: 1%;
+    background-color: #f0f5e9;
+  }
+
+  .subtitle-custom {
+    border:2px solid black; 
+    padding: 10px; 
+    margin-top:5px; 
+    min-height: 45px;
+    min-width: 148px;
+    background-color: white;
+  }
