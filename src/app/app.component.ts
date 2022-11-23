@@ -16,6 +16,15 @@ export class AppComponent implements OnInit{
 
   constructor(public dialog: MatDialog) {}
 
+  ngOnInit(){
+    this.cardList = {
+      id: 1,
+      listName: 'To Do',
+      cardName: ['Make grocery list', 'Pay electricity bill']
+    }
+    this.cardLists.push(this.cardList)
+  }
+  
   openListDialog(): void {
     const dialogRef = this.dialog.open(ListDialogComponent, {
       width: '350px',
@@ -27,15 +36,6 @@ export class AppComponent implements OnInit{
         this.cardLists.push({id: this.cardLists.length + 1, listName: result, cardName: []})
       }
     });
-  }
-
-  ngOnInit(){
-    this.cardList = {
-      id: 1,
-      listName: 'To Do',
-      cardName: ['Make grocery list', 'Pay electricity bill']
-    }
-    this.cardLists.push(this.cardList)
   }
 
   openCardDialog(listName: Cardlist): void {

@@ -1,9 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Cardlist } from '../models/cardlist';
+
 @Component({
   selector: 'app-list-dialog',
   templateUrl: './list-dialog.component.html',
@@ -13,7 +11,7 @@ export class ListDialogComponent implements OnInit {
   listName: string
   constructor(
     public dialogRef: MatDialogRef<ListDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    @Inject(MAT_DIALOG_DATA) public data: Cardlist,
   ) {}
 
   onNoClick(): void {
@@ -21,7 +19,6 @@ export class ListDialogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.data)
   }
 
 }
